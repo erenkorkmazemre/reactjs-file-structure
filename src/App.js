@@ -1,13 +1,12 @@
 import './App.css';
-import Login from "../src/pages/login/index"
+import ComponentsDashboard from '@pages/componentsDashboard';
+
 function App() {
-  return (
-    <>
-    <Login>
-      
-    </Login>
-    </>
-  );
+    return (
+        <>
+            <ComponentsDashboard/>
+        </>
+    );
 }
 
 export default App;
