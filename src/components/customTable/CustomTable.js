@@ -1,6 +1,6 @@
 import React from "react";
 
-const CustomTable = ({label}) => {
+const CustomTable = ({label, numberOfColumn}) => {
 
     return (
         <>
@@ -16,16 +16,16 @@ const CustomTable = ({label}) => {
                 </tr>
                 </thead>
                 <tbody>
-                {new Array(5).fill(0).map((_, index) => (
+                {new Array({numberOfColumn}).fill(0).map((_, index) => (
                     <tr>
                         <td>Adresler</td>
                         <td>3 Files</td>
-
                         <td>5.6 MB</td>
                         <td>26/04/20202</td>
+                        <td>26/04/20202</td>
+                        <td>26/04/20202</td>
+                        <td>26/04/20202</td>
 
-                        <td>
-                        </td>
                     </tr>
                 ))}
                 </tbody>
@@ -37,5 +37,6 @@ const CustomTable = ({label}) => {
 export default CustomTable
 
 CustomTable.defaultProps = {
-    label: "Default Table Label"
+    label: "Default Table Label",
+    numberOfColumn: 2
 }

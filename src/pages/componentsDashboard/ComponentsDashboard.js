@@ -13,8 +13,8 @@ const ComponentsDashboard = () => {
             <CustomSelect label='Select-2'/>
             <CustomSelect label='Select-3'/>
             <CustomTable/>
-            <CustomTable label='Table-2'/>
-            <CustomTable label='Table-3'/>
+            <CustomTable numberOfColumn={3} label='Table-2'/>
+            <CustomTable numberOfColumn={8} label='Table-3'/>
         </>
     )
 }
