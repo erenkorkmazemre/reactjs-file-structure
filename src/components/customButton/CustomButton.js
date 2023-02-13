@@ -14,5 +14,5 @@ const CustomButton = ({label, handleClick}) => {
 export default CustomButton;
 
 CustomButton.defaultProps = {
-    label: 'Default Label',
+    label: 'Default Button Label',
 };
