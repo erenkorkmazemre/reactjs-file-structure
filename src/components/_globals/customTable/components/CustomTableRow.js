@@ -5,7 +5,7 @@ const CustomTableRow = ({rowContent}) => {
     return (
         <>
             <tr>
-                {rowContent.map((val, rowID) => <td key={rowID}>{val}</td>)}
+                {rowContent.map((val, rowID) => <td  style={{border: "1px solid black"}} key={rowID}>{val}</td>)}
             </tr>
         </>
     )

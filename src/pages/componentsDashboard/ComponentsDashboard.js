@@ -1,20 +1,20 @@
 import React from 'react'
-import CustomButton from "@components/customButton";
-import CustomSelect from "@components/customSelect";
-import CustomTable from "@components/customTable";
+import CustomButton from "@components/_globals/customButton";
+import CustomSelect from "@components/_globals/customSelect";
+import CustomTable from "@components/_globals/customTable";
+import CustomInput from "@components/_globals/customInput";
 
 const ComponentsDashboard = () => {
-
-    var headData = ['Name', 'City', 'Course'];
-
+    var headData = ['Name', 'City', 'Course', 'Course'];
     var bodyData =
         [['Kapil', 'Jaipur', 'MCA'],
-            ['Aakash', 'Hisar', 'Btech'],
+            ['Aakash', 'Hisar', 'Btech', 'Course'],
             ['Mani', 'Ranchi', 'MSc'],
             ['Yash', 'Udaipur', 'Mtech'],
             ['Yash', 'Udaipur', 'Mtech']
         ];
-
+    console.log(headData)
+    console.log(bodyData)
     return (
         <>
             <CustomButton/>
@@ -24,6 +24,7 @@ const ComponentsDashboard = () => {
             <CustomSelect label='Select-2'/>
             <CustomSelect label='Select-3'/>
             <CustomTable headData={headData} bodyData={bodyData}/>
+            <CustomInput/>
         </>
     )
 }

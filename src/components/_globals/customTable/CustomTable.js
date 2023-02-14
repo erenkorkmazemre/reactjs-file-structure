@@ -1,6 +1,6 @@
 import React from "react";
-import CustomTableHeadAndBody from "@components/customTable/components/CustomTableHeadAndBody";
-import CustomTableRow from "@components/customTable/components/CustomTableRow";
+import CustomTableHeadAndBody from "@components/_globals/customTable/components/CustomTableHeadAndBody";
+import CustomTableRow from "@components/_globals/customTable/components/CustomTableRow";
 
 const CustomTable = ({label, numberOfColumn, bodyData, headData}) => {
 
