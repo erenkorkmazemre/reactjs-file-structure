@@ -43,8 +43,8 @@ const CustomCalendar = () => {
 
     // on date change, store date in state
     const handleSelect = (date) => {
-        // console.log(date)
-        // console.log(format(date, 'MM/dd/yyyy'))
+        console.log(date)
+        console.log(format(date, 'MM/dd/yyyy'))
         setCalendar(format(date, 'MM/dd/yyyy'))
     }
 

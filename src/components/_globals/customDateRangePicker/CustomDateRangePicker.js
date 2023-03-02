@@ -28,6 +28,7 @@ const CustomDateRangePicker = () => {
         // event listeners
         document.addEventListener("keydown", hideOnEscape, true)
         document.addEventListener("click", hideOnClickOutside, true)
+
     }, [])
 
     // hide dropdown on ESC press
