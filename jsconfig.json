@@ -3,7 +3,12 @@
     "baseUrl": ".",
     "paths": {
       "@components/*": ["src/components/*"],
-      "@pages/*": ["src/pages/*"]
+      "@pages/*": ["src/pages/*"],
+      "@validations/*": ["src/validations/*"],
+      "@redux/*": ["src/redux/*"],
+      "@hooks/*": ["src/hooks/*"],
+      "@config/*": ["src/config/*"],
+      "@api/*": ["src/api/*"]
     }
   }
 }

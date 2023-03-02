@@ -2,7 +2,11 @@ $fuschia: #ff0081;
 $button-bg: $fuschia;
 $button-text-color: #fff;
 $baby-blue: #f8faff;
-
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .bubblyButton{
   display: inline-block;
   font-size: 1em;

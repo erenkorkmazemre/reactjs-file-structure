@@ -2,10 +2,10 @@ import React from 'react'
 import CustomButton from "@components/_globals/customButton";
 import CustomSelect from "@components/_globals/customSelect";
 import CustomTable from "@components/_globals/customTable";
-import LoginForm from "@components/loginForm/LoginForm";
 import CustomCalendar from "@components/_globals/customCalendar/CustomCalendar";
 import CustomDateRange from "@components/_globals/customDateRange";
 import CustomDateRangePicker from "@components/_globals/customDateRangePicker";
+import LoginForm from "@pages/login/loginForm";
 const ComponentsDashboard = () => {
     var headData = ['Name', 'City', 'Course', 'Course'];
     var bodyData =

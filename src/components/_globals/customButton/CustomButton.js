@@ -1,9 +1,10 @@
 import React from 'react';
 import styles from './CustomButton.module.scss';
-const CustomButton = ({label, handleClick}) => {
+
+const CustomButton = ({label, onClick, type}) => {
     return (
-        <div>
-            <button className={styles.bubblyButton} onClick={handleClick}>
+        <div className={styles.container}>
+            <button className={styles.bubblyButton} onClick={onClick} type={type}>
                 {label}
             </button>
         </div>
