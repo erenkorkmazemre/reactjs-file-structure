@@ -5,18 +5,20 @@ import {useFormik} from "formik";
 import {useState} from "react";
 import validation from "@validations/Login.validation";
 import {useStudent} from "@hooks/useStudent";
+import CustomTable from "@components/_globals/customTable";
 
 const LoginForm = ({underlineLabel}) => {
-    const {studentList} = useStudent();
+    const {studentList,fetchAllStudents} = useStudent();
     const [validationErrorMessage, setValidationErrorMessage] = useState(false);
     const {handleSubmit, handleChange, values, errors} = useFormik({
         initialValues: {
             email: "",
             password: "",
         },
-        onSubmit: (values, errors) => {
+        onSubmit: (values) => {
             console.log(values);
             console.log(studentList)
+            fetchAllStudents();
         },
         validationSchema: validation,
     });
@@ -44,6 +46,7 @@ const LoginForm = ({underlineLabel}) => {
                              placeholder='Password'
                              underlineLabel={underlineLabel}/>
                 <CustomButton label={"Login"} onClick={validationMessage} type="submit"/>
+                <CustomTable label={"eren"} data={studentList} numberOfColumn={2}/>
             </form>
         </div>
     )

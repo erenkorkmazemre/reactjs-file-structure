@@ -1,19 +1,25 @@
 import React from "react";
-import CustomTable from "@components/_globals/customTable";
-import CustomTableRow from "@components/_globals/customTable/components/CustomTableRow";
 
-const CustomTableHeadAndBody = ({headData, bodyData}) => {
+const CustomTableHeadAndBody = ({data}) => {
     return (
         <>
-            <table style={{width: 500, textAlign: "center", border: "1px solid black"}}>
+            <table>
                 <thead>
                 <tr>
-                    {headData.map((head, headID) => <th style={{border: "1px solid black"}} key={headID}>{head}</th>)}
+                    {Object.keys(data[0]).map((key,index) => (
+                        <th key={index} style={{borderStyle: "solid", borderColor: "black"}}>{key}</th>
+                    ))}
                 </tr>
                 </thead>
-                <tbody>
-                {bodyData.map((rowContent, rowID) => <CustomTableRow rowContent={rowContent} key={rowID}/>)}
-                </tbody>
+                {data.map((item) => (
+                    <tbody key={item.id}>
+                    <tr>
+                        {Object.values(item).map((val,index) => (
+                            <td key={index} style={{borderStyle: "solid", borderColor: "black"}}>{val}</td>
+                        ))}
+                    </tr>
+                    </tbody>
+                ))}
             </table>
         </>
     )
