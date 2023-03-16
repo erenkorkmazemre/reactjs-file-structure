@@ -1,6 +1,6 @@
 import {useDispatch, useSelector} from 'react-redux';
 import useMount from "@hooks/useMount";
-import {fetchStudents} from "@redux/actions/StudentActions";
+import {createStudent, fetchStudents} from "@redux/actions/StudentActions";
 
 export const useStudent = () => {
     const dispatch = useDispatch();
@@ -8,12 +8,20 @@ export const useStudent = () => {
 
     const fetchAllStudents = () => {
         dispatch(fetchStudents());
-        console.log(studentList)
+        console.log("2")
+    };
+
+    const createStudents = (payload) => {
+        dispatch(createStudent({...payload}));
+        console.log("1")
     };
 
     useMount(() => {
         fetchAllStudents();
+        console.log("4")
     });
 
-    return {fetchAllStudents, studentList};
+    return {fetchAllStudents, studentList, createStudents};
 };
+
+

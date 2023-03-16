@@ -1,7 +1,7 @@
 import {STUDENT_ACTION_TYPES} from "@redux/actions/StudentActions";
 
 const initialState = {
-    studentList: [],
+    studentList: [{}],
 };
 
 const reducer = (state = initialState, {type, payload}) => {
@@ -16,7 +16,7 @@ const reducer = (state = initialState, {type, payload}) => {
             // TODO remove from fix 404 problem!
             return {
                 ...state,
-                studentList: [],
+                studentList: [{id:"ERROR"}],
             };
 
         default:

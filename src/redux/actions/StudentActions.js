@@ -16,35 +16,19 @@ export const fetchStudents = () => {
 };
 
 export const createStudent = ({
-                                  firstName,
-                                  lastName,
-                                  username,
-                                  email,
-                                  password,
-                                  phone,
-                                  address,
-                                  projectId,
-                                  companyId,
+                                  name,
+                                  surname
                               }) => {
     return {
         type: STUDENT_ACTION_TYPES.CREATE_STUDENTS,
         payload: {
-            client: 'organization',
+            client: 'student',
             request: {
                 method: 'POST',
-                url: '/users',
+                url: '/students/',
                 data: {
-                    firstName,
-                    lastName,
-                    userName: username,
-                    email,
-                    password,
-                    phone,
-                    address,
-                    projectId,
-                    companyId,
-                    userType: 'USER',
-                    projectIdList: [projectId],
+                    name,
+                    surname,
                 },
             },
         },
