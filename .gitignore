@@ -24,3 +24,14 @@ yarn-error.log*
 
 yarn.lock
 package-lock.json
+.idea/jsLibraryMappings.xml
+.idea/modules.xml
+.idea/reactjs-file-structure.iml
+.idea/vcs.xml
+.idea/watcherTasks.xml
+
+.idea/workspace.xml
+.idea/shelf/Changes.xml
+.idea/shelf/Changes1.xml
+.idea/shelf/Changes/shelved.patch
+.idea/shelf/Changes1/shelved.patch
