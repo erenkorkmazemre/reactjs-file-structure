@@ -7,7 +7,7 @@ function Login() {
     return (
         <>
             <Navbar/>
-            <LeftSideBar/>
+            {/* <LeftSideBar/> */}
             <LoginForm/>
         </>
     )

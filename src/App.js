@@ -10,7 +10,7 @@ function App() {
         <>
             <Provider store={store}>
                 <PersistGate persistor={persistedStore}>
-                    {/*<ComponentsDashboard/>*/}
+                    {/* <ComponentsDashboard/> */}
                     <Login/>
                 </PersistGate>
             </Provider>
