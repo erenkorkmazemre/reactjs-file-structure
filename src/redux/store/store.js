@@ -1,4 +1,4 @@
-import {combineReducers, applyMiddleware, createStore} from 'redux';
+import {combineReducers, applyMiddleware, legacy_createStore} from 'redux';
 import {persistStore, persistReducer} from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
 import {multiClientMiddleware} from 'redux-axios-middleware';
@@ -37,7 +37,7 @@ const axiosMiddlewareClients = {
 
 };
 
-export const store = createStore(
+export const store = legacy_createStore(
     persistedReducer,
     applyMiddleware(
         thunk.withExtraArgument({demo: 'demo'}),

@@ -6,13 +6,13 @@ export const useStudent = () => {
     const dispatch = useDispatch();
     const studentList = useSelector((state) => state.student.studentList);
 
-    const fetchAllStudents = () => {
-        dispatch(fetchStudents());
+    const fetchAllStudents = async () => {
+        await dispatch(fetchStudents());
         console.log("2")
     };
 
-    const createStudents = (payload) => {
-        dispatch(createStudent({...payload}));
+    const createStudents = async (payload) => {
+        await dispatch(createStudent({...payload}));
         console.log("1")
     };
 
