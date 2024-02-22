@@ -1,18 +1,50 @@
-import React from 'react'
-import modules from './LeftSideBar.module.scss'
-
+import React from "react";
+import modules from "./LeftSideBar.module.scss";
+import { Link } from "react-router-dom";
 const LeftSideBar = () => {
-    return (
-            <div className={modules.sidebarmenu}>
-                <ul>
-                    <li><a href="#"><i className="fas fa-home"></i>Anasayfa</a></li>
-                    <li><a href="#"><i className="fas fa-cog"></i>Hakkımda</a></li>
-                    <li><a href="#"><i className="fas fa-id-card"></i>Ürünler</a></li>
-                    <li><a href="#"><i className="fas fa-question-circle"></i>Galeri</a></li>
-                    <li><a href="#"><i className="fas fa-folder-open"></i>İletişim</a></li>
-                </ul>
-            </div>
-    )
-}
+  return (
+    <div className={modules.sidebarmenu}>
+      <nav>
+        <ul>
+          <li>
+            <Link to={`/home`}>
+              <span>Anasayfa</span>
+            </Link>
+          </li>
+          <li>
+            <Link to={`/management`}>
+              <span>Management</span>
+            </Link>
+          </li>
+          <li>
+            <Link to={`/about-me`}>
+              <span>Hakkımda</span>
+            </Link>
+          </li>
+          <li>
+            <Link to={`/products`}>
+              <span>Urunler</span>
+            </Link>
+          </li>
+          <li>
+            <Link to={`/galeria`}>
+              <span>Galeri</span>
+            </Link>
+          </li>
+          <li>
+            <Link to={`/contact`}>
+              <span>Iletisim</span>
+            </Link>
+          </li>
+          <li>
+            <Link to={`/login`}>
+              <span>Login</span>
+            </Link>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  );
+};
 
-export default LeftSideBar
+export default LeftSideBar;

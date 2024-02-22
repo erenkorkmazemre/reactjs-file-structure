@@ -4,6 +4,7 @@ module.exports = {
         alias: {
             '@': path.resolve(__dirname, 'src/'),
             '@components': path.resolve(__dirname, 'src/components/'),
+            '@assets': path.resolve(__dirname, 'src/assets/'),
             '@pages': path.resolve(__dirname, 'src/pages/'),
             '@validations': path.resolve(__dirname, 'src/validations/'),
             '@redux': path.resolve(__dirname, 'src/redux/'),

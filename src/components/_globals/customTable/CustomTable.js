@@ -1,13 +1,13 @@
 import React from "react";
 import CustomTableHeadAndBody from "@components/_globals/customTable/components/CustomTableHeadAndBody";
 
-const CustomTable = ({label, numberOfColumn, data}) => {
+const CustomTable = ({label, numberOfColumn, data, style}) => {
 
 
 
     return (
         <>
-            <CustomTableHeadAndBody data={data}/>
+            <CustomTableHeadAndBody style={style} data={data}/>
         </>
     )
 }

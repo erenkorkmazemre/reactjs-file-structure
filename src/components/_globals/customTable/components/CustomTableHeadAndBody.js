@@ -1,9 +1,9 @@
 import React from "react";
 
-const CustomTableHeadAndBody = ({data}) => {
+const CustomTableHeadAndBody = ({data, style}) => {
     return (
         <>
-            <table>
+            <table style={style}>
                 <thead>
                 <tr>
                     {Object.keys(data[0]).map((key,index) => (
@@ -15,7 +15,7 @@ const CustomTableHeadAndBody = ({data}) => {
                     <tbody key={item.id}>
                     <tr>
                         {Object.values(item).map((val,index) => (
-                            <td key={index} style={{borderStyle: "solid", borderColor: "black"}}>{val}</td>
+                            <td key={index} style={{borderStyle: "solid", borderColor: "black"}}>{null || val?.toString()}</td>
                         ))}
                     </tr>
                     </tbody>

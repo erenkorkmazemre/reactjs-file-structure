@@ -6,8 +6,6 @@ import LoginForm from "@pages/login/loginForm";
 function Login() {
     return (
         <>
-            <Navbar/>
-            {/* <LeftSideBar/> */}
             <LoginForm/>
         </>
     )
