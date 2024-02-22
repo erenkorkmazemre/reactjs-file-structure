@@ -15,7 +15,7 @@ const CustomTableHeadAndBody = ({data, style}) => {
                     <tbody key={item.id}>
                     <tr>
                         {Object.values(item).map((val,index) => (
-                            <td key={index} style={{borderStyle: "solid", borderColor: "black"}}>{null || val?.toString()}</td>
+                            <td key={index} style={{borderStyle: "solid", borderColor: "black"}}>{null || val?.[0]?.name || val?.toString() }</td>
                         ))}
                     </tr>
                     </tbody>
