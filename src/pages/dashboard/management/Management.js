@@ -27,7 +27,9 @@ function Management(props) {
             <h4>
               <b>Ogrenci Yonetimi [Ogretmen Yetkisi]</b>
             </h4>
+            <Link to={`/management/student-panel`}>
             <p>Panel</p>
+            </Link>
             <p>Hizli Ogrenci Olustur</p>
           </div>
         </div>
@@ -38,8 +40,8 @@ function Management(props) {
             <h4>
               <b>Dersler</b>
             </h4>
-            <Link to={`/management/student-panel`}>
-              <span>Panel</span>
+            <Link to={`/management/lecture-panel`}>
+            <p>Panel</p>
             </Link>
             <p>Hizli Ders Olustur</p>
           </div>

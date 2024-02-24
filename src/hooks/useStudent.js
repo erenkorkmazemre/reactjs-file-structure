@@ -8,17 +8,14 @@ export const useStudent = () => {
 
     const fetchAllStudents = async () => {
         await dispatch(fetchStudents());
-        console.log("2")
     };
 
     const createStudents = async (payload) => {
         await dispatch(createStudent({...payload}));
-        console.log("1")
     };
 
     useMount(() => {
         fetchAllStudents();
-        console.log("4")
     });
 
     return {fetchAllStudents, studentList, createStudents};

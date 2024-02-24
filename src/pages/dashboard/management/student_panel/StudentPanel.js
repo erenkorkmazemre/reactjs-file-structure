@@ -2,12 +2,14 @@ import React from "react";
 import PropTypes from "prop-types";
 import { useStudent } from "@hooks/useStudent";
 import CustomDataTable from "@components/_globals/customDataTable";
+import StudentCreationForm from "./studentCreationForm";
 
 function StudentPanel(props) {
   const { studentList } = useStudent();
   return (
     <>
       <div style={{ marginLeft: 200 }}>StudentPanel</div>
+      <StudentCreationForm style={{ marginLeft: 200 }}/>
       <CustomDataTable
               style={{ marginLeft: 200 }}
               label={"student-panel"}

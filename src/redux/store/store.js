@@ -4,11 +4,13 @@ import storage from 'redux-persist/lib/storage';
 import {multiClientMiddleware} from 'redux-axios-middleware';
 import thunk from 'redux-thunk';
 import student from '@redux/reducers/StudentReducer';
-import {defaultApi, studentApi} from "@api/index";
+import lecture from '@redux/reducers/LectureReducer';
+import {defaultApi, studentApi, lectureApi} from "@api/index";
 
 
 const appReducer = combineReducers({
     student,
+    lecture
 });
 
 const rootReducer = (state, action) => {
@@ -33,6 +35,9 @@ const axiosMiddlewareClients = {
     },
     student: {
         client: studentApi,
+    },
+    lecture: {
+        client: lectureApi,
     }
 
 };

@@ -10,6 +10,7 @@ import Galeria from "@pages/dashboard/galeria/Galeria";
 import Management from "@pages/dashboard/management/Management";
 import Login from "@pages/login/Login";
 import StudentPanel from "@pages/dashboard/management/student_panel/StudentPanel";
+import LecturePanel from "@pages/dashboard/management/lecture_panel/LecturePanel";
 
 function RouterGlobal() {
   const { isLoggedIn } = useSelector((store) => ({
@@ -33,6 +34,7 @@ function RouterGlobal() {
           <Route exact path="/home" component={Dashboard} />
           <Route exact path="/management" component={Management} />
           <Route exact path="/management/student-panel" component={StudentPanel} />
+          <Route exact path="/management/lecture-panel" component={LecturePanel} />
           <Route exact path="/about-me" component={AboutMe} />
           <Route exact path="/galeria" component={Galeria} />
           <Redirect to={"/"} />
